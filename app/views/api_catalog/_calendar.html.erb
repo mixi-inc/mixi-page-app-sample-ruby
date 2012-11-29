@@ -1,0 +1,86 @@
+<div class="sample addSchedule">
+<h2 class="part heading"><img src="/assets/icon/add_schedule001.png" width="23"  height="23" alt="" class="icon" />カレンダーに予定を登録</h2>
+<div class="part description">
+<div class="inner">
+<p>ユーザーのカレンダーに予定を登録できます。</p>
+<p>例）イベント開催日やキャンペーン応募締切日等を登録する。</p>
+</div>
+<!--/description--></div>
+
+<div class="part body">
+
+<div class="illustration">
+<img src="/assets/illustration/add_schedule001.png" width="320"  height="42" alt="" />
+<p class="thumbnail"><img src="${thumbnailUrl}" alt="${displayName}" /></p>
+</div>
+
+<div class="sampleForm">
+<dl>
+<dt>タイトル：</dt>
+<dd><input id="calTitle" type="text" class="subject" value="半額クーポンプレゼント締切" /></dd>
+</dl>
+
+<dl>
+<dt>日時：</dt>
+<dd>
+<select id="calYear">
+<% for year in 2012..2017 %>
+<option value='<%= year %>'><%= year %></option>
+<% end %>
+</select><span class="unit">年</span>
+<select id="calMonth">
+<% for month in 1..12 %>
+<option value='<%= "%02d"%month %>'><%= "%02d"%month %></option>
+<% end %>
+</select><span class="unit">月</span>
+<select id="calDay">
+<% for day in 1..31 %>
+<option value='<%= "%02d"%day %>'><%= "%02d"%day %></option>
+<% end %>
+</select><span class="unit">日</span>
+<select id="calTime">
+<% for hour in 0..23 %>
+<% for min in ['00','30'] %>
+<option value='<%= "%02d"%hour %>:<%= min %>'><%= "%02d"%hour %>:<%= min %></option>
+<% end %>
+<% end %>
+</select>
+</dd>
+</dl>
+
+<dl>
+<dt>予定の公開範囲：</dt>
+<dd>
+<select id="calVisibility">
+<option value="everyone">全体に公開</option>
+<option value="friends">友人まで公開</option>
+<option value="friends_of_friends">友人の友人まで公開</option>
+<option value="top_friends">仲良しに公開</option>
+<option value="self">非公開</option>
+</select>
+</dd>
+</dl>
+
+<!--
+<dl>
+<dt>内容：</dt>
+<dd><textarea></textarea></dd>
+</dl>
+</div>
+-->
+
+<div class="submit">
+<a id="btnCalendar" href="#"><img src="/assets/button/add_schedule001.png" width="257"  height="65" alt="予定を登録する"/></a>
+</div>
+
+<!--/body--></div>
+
+<div class="part seeMore">
+<a href="http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/calendar-api/" target="_blank">
+このAPIについて詳しく見る<img src="/assets/icon/target_blank001.gif" width="10" height="10" alt="別ウィンドウで開く" /></a>
+</div>
+
+<div class="part return">
+<a id="btnGoToMenu" href="#"><img src="/assets/button/return001.png" alt="もどる" width="57" height="31" /></a>
+</div>
+<!--/sample--></div>

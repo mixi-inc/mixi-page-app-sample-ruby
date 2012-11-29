@@ -1,0 +1,89 @@
+<%= stylesheet_link_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/vader/jquery-ui.css' %>
+<%= stylesheet_link_tag 'dialog' %>
+<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' %>
+<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js' %>
+<%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' %>
+<%= javascript_include_tag 'http://static.mixi.jp/js/page.js' %>
+<%= javascript_include_tag 'quick_start' %>
+<%= javascript_include_tag 'main' %>
+
+<div class="body">
+<div id="display">
+<!--/display--></div>
+<!--/body--></div>
+
+
+<!--Template for Menu-->
+<script id="tmplMenu" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/menu' %>
+</script>
+
+
+<!--Template for Friends-->
+<script id="tmplFriends" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/friends' %>
+</script>
+
+
+<!--Template for Voice-->
+<script id="tmplVoice" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/voice' %>
+</script>
+
+
+<!--Template for Calendar-->
+<script id="tmplCalendar" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/calendar' %>
+</script>
+
+
+<!--Template for Message-->
+<script id="tmplMessage" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/message' %>
+</script>
+
+
+<!--Template for Photo-->
+<script id="tmplPhoto" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/photo' %>
+</script>
+
+
+<!--Template for Follower-->
+<script id="tmplFollowers" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/follower' %>
+</script>
+
+
+<!--Template for Comment-->
+<script id="tmplComment" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/comment' %>
+</script>
+
+
+<!--Template for Like-->
+<script id="tmplLike" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/like' %>
+</script>
+
+
+<!--Template for popup select friend-->
+<script id="tmplSelectFriend" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/popup_select_friend' %>
+</script>
+
+<!--Template for popup show friend-->
+<script id="tmplShowFriend" type="text/x-jquery-tmpl">
+<%= render 'api_catalog/popup_show_friend' %>
+</script>
+
+
+<!-- popup dialog by jquery ui-->
+<div id="result-dialog" class="ui-dialog"></div>
+
+<input id="appId" type="hidden" value="<%= @consumer_key %>" />
+<input id="appUrl" type="hidden" value="<%= @app_url %>" />
+<input id="relayUrl" type="hidden" value="<%= @relay_url %>" />
+<input id="sid" type="hidden" value="<%= @session_id %>" />
+<input id="pageId" type="hidden" value="<%= @page_id %>" />
+

@@ -1,0 +1,44 @@
+<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' %>
+<%= javascript_include_tag 'http://static.mixi.jp/js/page.js' %>
+
+<div class="index">
+<h2 class="heading">mixi API Quick Start</h2>
+
+<div class="sample">
+<div class="welcome">
+<p>mixi API Quick Startは<br />mixiのAPIを手軽に試せるアプリです！</p>
+</div>
+
+<div id="btnAuth" class="submit">
+<a href="#"><img src="/assets/button/start_button001.png" width="257"  height="65" alt="アプリをはじめる" /></a>
+</div>
+
+<div class="bottom"></div>
+<!--/sample--></div>
+<!--/index--></div>
+
+
+<input id="appId" type="hidden" value="<%= @consumer_key %>" />
+<input id="relayUrl" type="hidden" value="<%= @relay_url %>" />
+<input id="scope" type="hidden" value="<%= @scope %>" />
+<input id="state" type="hidden" value="<%= @state %>" />
+
+<script type="text/javascript">
+$(function(){
+
+mixi.init({
+    appId: $('#appId').val(),
+    relayUrl: $('#relayUrl').val()
+});
+mixi.window.adjustHeight();
+
+// 「アプリを試す」ボタン押下時処理
+$('#btnAuth').click(function() {
+    mixi.auth({
+        scope: $('#scope').val(),
+        state: $('#state').val()
+    });
+});
+
+});
+</script>
