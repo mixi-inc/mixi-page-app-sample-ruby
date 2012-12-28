@@ -1,4 +1,4 @@
-mixi-app-sample-ruby
+mixi-page-app-sample-ruby
 ====================
 Railsで構築された、Heroku上で動作するmixiページアプリのサンプルです。
 mixi API Quick Startのサンプルアプリに利用されています。
