@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
@@ -41,3 +43,5 @@ gem 'simplecov', :require => false
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'rails_12factor'
